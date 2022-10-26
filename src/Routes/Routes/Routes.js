@@ -10,6 +10,7 @@ import Register from "../../Pages/Register/Register";
 import TermsAndConditions from "../../Pages/Others/TermsAndConditions/TermsAndConditions";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Profile from "../../Pages/Others/Profile/Profile";
+import FourZeroFour from "../../Pages/Others/FourZeroFour/FourZeroFour";
 
 export const routes = createBrowserRouter([
     {
@@ -71,5 +72,7 @@ export const routes = createBrowserRouter([
             }
         ]
 
-    }
+    },
+    { path: '*', element: <FourZeroFour></FourZeroFour> }
+    // <div><h2 className='mt-5'>404 Route Not Found</h2></div>
 ])

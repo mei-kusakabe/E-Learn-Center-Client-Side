@@ -1,0 +1,15 @@
+.bg4-image {
+    height: 100vh;
+    min-height: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* z-index: 2; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/04/00/15/56/1000_F_400155670_1qDGowgEcs4MAMPxRBAyNPr6eqfOGSh8.jpg'); */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://as1.ftcdn.net/v2/jpg/04/00/15/56/1000_F_400155670_1qDGowgEcs4MAMPxRBAyNPr6eqfOGSh8.jpg');
+}
