@@ -6,22 +6,37 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import "./Login.css"
-import { GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { ButtonGroup } from 'react-bootstrap';
 import { FaGoogle, FaGithub } from "react-icons/fa";
-
+import app from '../../firebase/firebase.config';
 
 
 const Login = () => {
+    const auth = getAuth(app);
+    const [user, setUser] = useState(null);
 
     const { providerLogin } = useContext(AuthContext);
 
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+
+
+    const handleGithubSignIn = () => {
+        signInWithPopup(auth, githubProvider)
+            // (githubProvider)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
                 console.log(user);
             })
             .catch(error => console.error(error))
@@ -64,7 +79,6 @@ const Login = () => {
 
     return (
 
-        // 
         <Form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center align-items-center my-3 px-3 py-5 mx-5 border rounded-3 form">
             <h3 className='mb-3'>Sign In</h3>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -85,7 +99,7 @@ const Login = () => {
             <div>
                 <ButtonGroup vertical>
                     <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
-                    <Button variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
+                    <Button onClick={handleGithubSignIn} variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
                 </ButtonGroup>
             </div>
         </Form>

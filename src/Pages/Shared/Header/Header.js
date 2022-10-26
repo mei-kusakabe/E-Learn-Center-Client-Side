@@ -34,43 +34,8 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
                             <Nav.Link href="/courseCategories" className='pe-2'>Courses</Nav.Link>
-                            {/* <NavDropdown href="#features" title="Courses" className='pe-2' id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Programming Languages</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Data Science and Machine Learning
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Design
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">
-                                Development
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.5">
-                                Photography
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.6">
-                                English
-                            </NavDropdown.Item>
-                        </NavDropdown> */}
                             <Nav.Link href="/faq" className='pe-2'>FAQ</Nav.Link>
                             <Nav.Link href="/blog" className='pe-2'>Blog</Nav.Link>
-                            {/* <Nav>
-                                <>
-                                    {
-                                        user?.uid ?
-                                            <>
-                                                <span>{user?.displayName}</span>
-                                                <Button variant="light" onClick={handleLogOut}>Log out</Button>
-                                            </>
-                                            :
-                                            <>
-                                                <Link to='/login'>Login</Link>
-                                                <Link to='/register'>Register</Link>
-                                            </>
-                                    }
-
-
-                                </> */}
-
                             <Nav.Link eventKey={2} href="/about" className='pe-2'>
                                 About Us
                             </Nav.Link>
@@ -94,7 +59,7 @@ const Header = () => {
                                 <Link to="/profile">
                                     {user?.photoURL ?
                                         <Image
-                                            style={{ height: '30px' }}
+                                            style={{ height: '50px' }}
                                             roundedCircle
                                             src={user?.photoURL}>
                                         </Image>
