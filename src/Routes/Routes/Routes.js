@@ -20,10 +20,16 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
+                loader: async () => {
+                    return fetch('http://localhost:5000/courseCategories');
+                },
                 element: <Home></Home>
             },
             {
                 path: '/home',
+                loader: async () => {
+                    return fetch('http://localhost:5000/courseCategories');
+                },
                 element: <Home></Home>
             },
             {

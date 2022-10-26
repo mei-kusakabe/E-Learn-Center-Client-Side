@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
-import Category from '../Category/Category';
+// import Category from '../Category/Category';
 import "./CourseDetails.css"
 
 const CourseDetail = () => {
@@ -33,7 +33,7 @@ const CourseDetail = () => {
                                         <div className=''>
                                             {/* <span className='fw-bold'>Course Description: </span>{topic.description} */}
                                             <p className="card-text">{topic.description}</p>
-                                            <a href="#" className="btn btn-primary mb-3">Get Premium Access</a>
+                                            <a href="/premium" className="btn btn-primary mb-3">Get Premium Access</a>
                                         </div>
                                     </div>)
 

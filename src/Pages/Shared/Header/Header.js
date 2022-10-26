@@ -23,20 +23,20 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <Navbar collapseOnSelect className='' expand="lg" bg="light" variant="light">
+            <Navbar collapseOnSelect className='nav-bg text-white' expand="lg" variant="light">
                 <Container>
                     <div>
                         <img src="https://cdn-icons-png.flaticon.com/512/2936/2936735.png" alt="Logo" width="50" height="35" className="d-inline-block align-text-top" />
-                        <Navbar.Brand href="/home" className='fw-bold'>E-learning Centre</Navbar.Brand>
+                        <Navbar.Brand href="/home" className='fw-bold text-white'>E-learning Centre</Navbar.Brand>
                     </div>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            <Nav.Link href="/courseCategories" className='pe-2'>Courses</Nav.Link>
-                            <Nav.Link href="/faq" className='pe-2'>FAQ</Nav.Link>
-                            <Nav.Link href="/blog" className='pe-2'>Blog</Nav.Link>
-                            <Nav.Link eventKey={2} href="/about" className='pe-2'>
+                            <Nav.Link href="/courseCategories" className='pe-2 text-white fw-bold'>Courses</Nav.Link>
+                            <Nav.Link href="/faq" className='pe-2 text-white fw-bold'>FAQ</Nav.Link>
+                            <Nav.Link href="/blog" className='pe-2 text-white fw-bold'>Blog</Nav.Link>
+                            <Nav.Link eventKey={2} href="/about" className='pe-2 text-white fw-bold'>
                                 About Us
                             </Nav.Link>
                             <Nav>
@@ -49,14 +49,14 @@ const Header = () => {
                                             </>
                                             :
                                             <>
-                                                <Link to='/login'>Login</Link>
-                                                <Link to='/register'>Register</Link>
+                                                <Link to='/login' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Login</Link>
+                                                <Link to='/register' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Register</Link>
                                             </>
                                     }
 
 
                                 </>
-                                <Link to="/profile">
+                                <Link to="/profile" style={{ textDecoration: 'none' }} className='text-white fw-bold'>
                                     {user?.photoURL ?
                                         <Image
                                             style={{ height: '50px' }}

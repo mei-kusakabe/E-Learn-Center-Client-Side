@@ -1,5 +1,8 @@
 import React from 'react';
-import Courses from '../Courses/Courses';
+import Blog from '../Blog/Blog';
+import Categories from '../Categories/Categories';
+// import Courses from '../Courses/Courses';
+import FAQ from '../FAQ/FAQ';
 import './Home.css';
 
 const Home = () => {
@@ -19,8 +22,13 @@ const Home = () => {
                 </div>
             </section>
             <div className='text-center'>
-                <Courses></Courses>
-
+                <Categories></Categories>
+            </div>
+            <div className='text-center'>
+                <Blog></Blog>
+            </div>
+            <div className='text-center'>
+                <FAQ></FAQ>
             </div>
 
             {/* <div className='topic-container m-5'>
