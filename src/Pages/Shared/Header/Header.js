@@ -1,13 +1,26 @@
 import React from 'react';
-import { NavDropdown } from 'react-bootstrap';
+import { useContext } from 'react';
+import { Button, Image, NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 import LeftSideNav from '../../LeftSideNav/LeftSideNav';
-
+import "./Header.css"
 
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
     return (
         <div className='header'>
             <Navbar collapseOnSelect className='' expand="lg" bg="light" variant="light">
@@ -40,11 +53,58 @@ const Header = () => {
                         </NavDropdown> */}
                             <Nav.Link href="/faq" className='pe-2'>FAQ</Nav.Link>
                             <Nav.Link href="/blog" className='pe-2'>Blog</Nav.Link>
+                            {/* <Nav>
+                                <>
+                                    {
+                                        user?.uid ?
+                                            <>
+                                                <span>{user?.displayName}</span>
+                                                <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                            </>
+                                            :
+                                            <>
+                                                <Link to='/login'>Login</Link>
+                                                <Link to='/register'>Register</Link>
+                                            </>
+                                    }
+
+
+                                </> */}
+
                             <Nav.Link eventKey={2} href="/about" className='pe-2'>
                                 About Us
                             </Nav.Link>
-                            <Nav.Link href="/login" className='pe-2'>Login</Nav.Link>
-                            <Nav.Link href="/register" className='pe-2'>Sign Up</Nav.Link>
+                            <Nav>
+                                <>
+                                    {
+                                        user?.uid ?
+                                            <>
+                                                <span>{user?.displayName}</span>
+                                                <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                            </>
+                                            :
+                                            <>
+                                                <Link to='/login'>Login</Link>
+                                                <Link to='/register'>Register</Link>
+                                            </>
+                                    }
+
+
+                                </>
+                                <Link to="/profile">
+                                    {user?.photoURL ?
+                                        <Image
+                                            style={{ height: '30px' }}
+                                            roundedCircle
+                                            src={user?.photoURL}>
+                                        </Image>
+                                        : <FaUser></FaUser>
+                                    }
+                                </Link>
+                            </Nav>
+
+                            {/* <Nav.Link href="/login" className='pe-2'>Login</Nav.Link>
+                            <Nav.Link href="/register" className='pe-2'>Sign Up</Nav.Link> */}
                         </Nav>
                         <div className='d-lg-none'>
                             <LeftSideNav></LeftSideNav>

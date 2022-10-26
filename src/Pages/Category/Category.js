@@ -14,8 +14,6 @@ const Category = ({ topic }) => {
         </div>
 
 
-
-
     );
 };
 
