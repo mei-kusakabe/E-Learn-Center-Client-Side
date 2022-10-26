@@ -6,17 +6,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import "./Login.css"
-import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { ButtonGroup } from 'react-bootstrap';
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import app from '../../firebase/firebase.config';
-
 
 const Login = () => {
-    const auth = getAuth(app);
-    const [user, setUser] = useState(null);
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, setUser } = useContext(AuthContext);
+
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -25,15 +22,14 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
+                setUser(user);
                 console.log(user);
             })
             .catch(error => console.error(error))
     }
 
-
-    const handleGithubSignIn = () => {
-        signInWithPopup(auth, githubProvider)
-            // (githubProvider)
+    const handleGitSignIn = () => {
+        providerLogin(githubProvider)
             .then(result => {
                 const user = result.user;
                 setUser(user);
@@ -99,7 +95,7 @@ const Login = () => {
             <div>
                 <ButtonGroup vertical>
                     <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
-                    <Button onClick={handleGithubSignIn} variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
+                    <Button onClick={handleGitSignIn} variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
                 </ButtonGroup>
             </div>
         </Form>

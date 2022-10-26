@@ -11,6 +11,7 @@ import TermsAndConditions from "../../Pages/Others/TermsAndConditions/TermsAndCo
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Profile from "../../Pages/Others/Profile/Profile";
 import FourZeroFour from "../../Pages/Others/FourZeroFour/FourZeroFour";
+import CourseDetail from "../../Pages/CourseDetails/CourseDetail";
 
 export const routes = createBrowserRouter([
     {
@@ -47,7 +48,8 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/courseCategories/:id',
-                element: <Categories></Categories>,
+                // element: <Categories></Categories>,
+                element: <CourseDetail></CourseDetail>,
                 loader: ({ params }) => fetch(`http://localhost:5000/courseCategories/${params.id}`)
             },
             {

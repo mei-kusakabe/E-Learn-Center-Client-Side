@@ -12,11 +12,12 @@ const LeftSideNav = () => {
             .then(data => setCategories(data));
     }, [])
     return (
-        <div className='p-3 border'>
-            <h4>All Category : {categories.length}</h4>
+        <div className='p-2 border left rounded'>
+            {/* <h4>All Category : {categories.length}</h4> */}
+            <h4 className='fw-bold'>All Available Courses</h4>
             {
-                categories.map(category => <p key={category.id}>
-                    <Link to={`/courseCategories/${category.id}`}>{category.name}</Link>
+                categories.map((category, i) => <p key={category.id}>
+                    <Link to={`/courseCategories/${category.id}`}> <span className='fw-bold'>{i + 1}.</span>{category.name}</Link>
                 </p>)
             }
 
