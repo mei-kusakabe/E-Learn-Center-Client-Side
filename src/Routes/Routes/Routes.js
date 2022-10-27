@@ -23,14 +23,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 loader: async () => {
-                    return fetch('http://localhost:5000/courseCategories');
+                    return fetch('https://e-learn-centre-server.vercel.app/courseCategories');
                 },
                 element: <Home></Home>
             },
             {
                 path: '/home',
                 loader: async () => {
-                    return fetch('http://localhost:5000/courseCategories');
+                    return fetch('https://e-learn-centre-server.vercel.app/courseCategories');
                 },
                 element: <Home></Home>
             },
@@ -49,7 +49,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/courseCategories',
                 loader: async () => {
-                    return fetch('http://localhost:5000/courseCategories');
+                    return fetch('https://e-learn-centre-server.vercel.app/courseCategories');
                 },
                 element: <Categories></Categories>
             },
@@ -57,13 +57,13 @@ export const routes = createBrowserRouter([
                 path: '/checkout/:id',
                 // element: <Categories></Categories>,
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/checkout/${params.id}`)
+                loader: ({ params }) => fetch(`https://e-learn-centre-server.vercel.app/checkout/${params.id}`)
             },
             {
                 path: '/courseCategories/:id',
                 // element: <Categories></Categories>,
                 element: <CourseDetail></CourseDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courseCategories/${params.id}`)
+                loader: ({ params }) => fetch(`https://e-learn-centre-server.vercel.app/courseCategories/${params.id}`)
             },
             {
                 path: '/blog',
