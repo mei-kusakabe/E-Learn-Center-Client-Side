@@ -4,7 +4,6 @@ import Categories from '../Categories/Categories';
 // import Courses from '../Courses/Courses';
 import FAQ from '../FAQ/FAQ';
 import './Home.css';
-
 const Home = () => {
     return (
         <div>

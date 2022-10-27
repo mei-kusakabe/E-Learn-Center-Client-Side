@@ -11,3 +11,7 @@
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d3kqdc25i4tl0t.cloudfront.net/articles/content/1532_376579_onlineskills.hero.jpg');
 }
+
+/* * {
+    overflow-x: hidden;
+} */

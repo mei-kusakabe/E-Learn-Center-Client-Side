@@ -1,25 +1,25 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import './Checkout.css'
 
 const Checkout = () => {
     const categories = useLoaderData();
     console.log(categories);
     return (
-        <div className="container text-center">
+        <div className="container text-center checkout">
 
-            <h2 class="my-5 h2 text-center">Checkout form</h2>
 
-            <div class="row">
+            <div class="row mx-5 d-flex justify-content-center">
 
-                <div class="col-md-8 mb-4 d-flex justify-content-around">
+                <h2 class="my-5 h2 text-center text-white fw-bold">Checkout form</h2>
 
-                    <div className="card mx-5 px-5">
+
+                <div class="col-md-8 mb-4 ">
+
+                    {/* <div className="card mx-5 px-5">
                         <div className="card-body">
-
                             <div className="row">
-
-                                <div className="col-md-6 mb-2">
-
+                                <div className="col-md-6 mb-2 col-sm-12">
                                     <div className="md-form ">
                                         <input type="text" id="firstName" className="form-control" />
                                         <label for="firstName" className="">First name</label>
@@ -27,7 +27,7 @@ const Checkout = () => {
 
                                 </div>
 
-                                <div className="col-md-6 mb-2">
+                                <div className="col-md-6 mb-2 col-sm-12">
 
 
                                     <div className="md-form">
@@ -177,13 +177,13 @@ const Checkout = () => {
                         </div>
 
 
-                    </div>
+                    </div> */}
 
-                    <div className="col-md-4 mb-4 mx-5">
-                        <h4 className="d-flex justify-content-between align-items-center mb-3">
-                            <span className="text-muted">Your cart</span>
-                            <span className="badge badge-secondary badge-pill">3</span>
-                        </h4>
+                    <div className="col-12 col-md-4 col-lg-12 col-sm-12 mb-4">
+                        {/* <h4 className="d-flex flex-column justify-content-between align-items-center mb-3">
+                            <span className="text-muted text-center fs-5">Your cart</span>
+                             <span className="badge badge-secondary badge-pill"></span> 
+                        </h4>  */}
 
                         <ul className="list-group mb-3 z-depth-1">
                             {
@@ -221,7 +221,7 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     );
 };

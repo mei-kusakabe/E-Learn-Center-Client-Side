@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
-import { Button, Image, NavDropdown } from 'react-bootstrap';
+import { Button, Image, InputGroup, NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaMoon, FaSun } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import LeftSideNav from '../../LeftSideNav/LeftSideNav';
 import "./Header.css"
+import '../../../darkMode.css'
+
 
 
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
+
+    const [theme, setTheme] = useState('light');
+    const [isActive, setActive] = useState(true);
+
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+        setActive(!isActive);
+    };
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
 
     const handleLogOut = () => {
         logOut()
@@ -33,24 +50,29 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
+                            <Nav.Link href="/home" className='pe-2 text-white fw-bold'>Home</Nav.Link>
                             <Nav.Link href="/courseCategories" className='pe-2 text-white fw-bold'>Courses</Nav.Link>
                             <Nav.Link href="/faq" className='pe-2 text-white fw-bold'>FAQ</Nav.Link>
                             <Nav.Link href="/blog" className='pe-2 text-white fw-bold'>Blog</Nav.Link>
-                            <Nav.Link eventKey={2} href="/about" className='pe-2 text-white fw-bold'>
+                            {/* <Nav.Link eventKey={2} href="/about" className='pe-2 text-white fw-bold'>
                                 About Us
-                            </Nav.Link>
+                            </Nav.Link> */}
                             <Nav>
                                 <>
                                     {
                                         user?.uid ?
                                             <>
-                                                <span>{user?.displayName}</span>
-                                                <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                                <span className='fw-bold my-2 mx-2'>{user?.displayName}</span>
+
+                                                {/* <FaArrowRight onClick={handleLogOut}></FaArrowRight> */}
+                                                <FaSignOutAlt className='fw-bold my-2 fs-4 mx-2' onClick={handleLogOut}></FaSignOutAlt>
+
+                                                {/* <Button variant="light" onClick={handleLogOut}>Log out</Button> */}
                                             </>
                                             :
                                             <>
                                                 <Link to='/login' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Login</Link>
-                                                <Link to='/register' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Register</Link>
+                                                {/* <Link to='/register' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Register</Link> */}
                                             </>
                                     }
 
@@ -75,6 +97,15 @@ const Header = () => {
                             <LeftSideNav></LeftSideNav>
                         </div>
                     </Navbar.Collapse>
+                    <div className={`header ${theme}`}>
+                        {
+                            isActive ?
+                                <FaSun className='fw-bold my-2 fs-4 mx-2' onClick={toggleTheme}></FaSun>
+                                :
+                                <FaMoon className='fw-bold my-2 fs-4 mx-2' onClick={toggleTheme}></FaMoon>
+                        }
+
+                    </div>
                 </Container>
             </Navbar>
         </div>

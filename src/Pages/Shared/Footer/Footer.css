@@ -130,10 +130,10 @@ footer {
     color: #27bcda;
 }
 
-@media (max-width:500px) {
+/* @media (max-width:500px) {
     .footer-menu ul {
         display: flex;
         margin-top: 10px;
         margin-bottom: 20px;
     }
-}
+} */
