@@ -64,15 +64,14 @@ footer {
     color: #fff;
     border: 1.1px solid white;
     padding: 5px;
-
     border-radius: 50%;
 
 }
 
 .socials a i {
-    font-size: 1.1rem;
+    font-size: 12px;
     width: 20px;
-    transition: color .4s ease;
+    /* transition: color .4s ease; */
 
 }
 
@@ -173,16 +172,15 @@ footer {
         border: 1.1px solid white;
         padding: 5px;
         border-radius: 50%;
-        overflow-y: hidden;
+
 
     }
 
     .socials a i {
-        font-size: 1.1rem;
+        font-size: 12px;
+        /* 1.1rem */
         width: 20px;
-        transition: color .4s ease;
-        overflow-y: hidden;
-
+        /* transition: color .4s ease; */
     }
 
 
@@ -211,24 +209,24 @@ footer {
         text-transform: uppercase;
         opacity: .4;
         font-weight: 200;
-        overflow-y: hidden;
+
     }
 
     .footer-menu {
         float: right;
-        overflow-y: hidden;
+
 
     }
 
     .footer-menu ul {
         display: flex;
-        overflow-y: hidden;
+
     }
 
     .footer-menu ul li {
         padding-right: 10px;
         display: block;
-        overflow-y: hidden;
+
     }
 
 
@@ -270,7 +268,7 @@ footer {
         border: 1.1px solid white;
         padding: 5px;
         border-radius: 50%;
-        overflow-y: hidden;
+
 
     }
 
@@ -278,7 +276,7 @@ footer {
         font-size: 1.1rem;
         width: 20px;
         transition: color .4s ease;
-        overflow-y: hidden;
+
 
     }
 
@@ -308,24 +306,24 @@ footer {
         text-transform: uppercase;
         opacity: .4;
         font-weight: 200;
-        overflow-y: hidden;
+
     }
 
     .footer-menu {
         float: right;
-        overflow-y: hidden;
+
 
     }
 
     .footer-menu ul {
         display: flex;
-        overflow-y: hidden;
+
     }
 
     .footer-menu ul li {
         padding-right: 10px;
         display: block;
-        overflow-y: hidden;
+
     }
 
 }

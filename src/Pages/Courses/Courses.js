@@ -7,7 +7,7 @@ const Courses = () => {
         <div className='text-center'>
             <Container>
                 <Row>
-                    <Col lg="2" className='d-none d-lg-block'>
+                    <Col lg="2" className='d-none'>
                         <LeftSideNav></LeftSideNav>
                     </Col>
                     <Col lg="3">

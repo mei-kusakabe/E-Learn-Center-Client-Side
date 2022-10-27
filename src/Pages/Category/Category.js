@@ -9,7 +9,7 @@ const Category = ({ topic }) => {
             <img src={logo} alt="" />
             <h4 className='p-3'>Title: {title} </h4>
             <h4> Price: {price}</h4>
-            <button type="button" className="btn btn-info px-5 py-2 fw-bold text-white my-3"><Link to={`/courseCategories/${id}`}>More Details</Link></button>
+            <button type="button" className="btn btn-info px-5  mx-3 fw-bold text-white my-2"><Link to={`/courseCategories/${id}`}>More Details</Link></button>
             {/* <button class="button"> <Link to={`/quiz/${id}`}>Test yourself</Link></button> */}
         </div>
 

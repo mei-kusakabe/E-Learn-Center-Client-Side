@@ -93,9 +93,9 @@ const Header = () => {
                             {/* <Nav.Link href="/login" className='pe-2'>Login</Nav.Link>
                             <Nav.Link href="/register" className='pe-2'>Sign Up</Nav.Link> */}
                         </Nav>
-                        <div className='d-lg-none'>
+                        {/* <div className='d-none'>
                             <LeftSideNav></LeftSideNav>
-                        </div>
+                        </div> */}
                     </Navbar.Collapse>
                     <div className={`header ${theme}`}>
                         {
