@@ -16,3 +16,5 @@ Assalamu 'alaikum,
 8) Password and email has also been verified.
 9)Private Route has also been explored.
 10) Converting page to pdf also been done in this project.
+11) I have used react-bootstrap,vanilla css for design purpose.
+12) I have used firebase,react libraries etc. for this project.
