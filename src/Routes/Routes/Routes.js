@@ -12,6 +12,8 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Profile from "../../Pages/Others/Profile/Profile";
 import FourZeroFour from "../../Pages/Others/FourZeroFour/FourZeroFour";
 import CourseDetail from "../../Pages/CourseDetails/CourseDetail";
+import Checkout from "../../Pages/Checkout/Checkout";
+
 
 export const routes = createBrowserRouter([
     {
@@ -51,7 +53,12 @@ export const routes = createBrowserRouter([
                 },
                 element: <Categories></Categories>
             },
-
+            {
+                path: '/checkout/:id',
+                // element: <Categories></Categories>,
+                element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/checkout/${params.id}`)
+            },
             {
                 path: '/courseCategories/:id',
                 // element: <Categories></Categories>,

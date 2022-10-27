@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Pdf from "react-to-pdf";
 import { Col, Container, Row } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
 import "./CourseDetails.css"
 
@@ -13,7 +13,6 @@ const CourseDetail = () => {
 
     return (
         <div>
-
             <div className='course-details'>
                 <Container>
                     <Row>
@@ -42,7 +41,10 @@ const CourseDetail = () => {
 
                                                 <div className='d-flex justify-content-around'>
                                                     <p className="card-text fw-bold"> <span>Price: </span>{topic.price}</p>
-                                                    <a href="/premium" className="btn btn-primary mb-3">Get Premium Access</a>
+                                                    {/* <button type="button" className="btn btn-info px-5 py-2 fw-bold text-white my-3"><Link to={`/courseCategories/${id}`}>More Details</Link></button> */}
+
+                                                    <button type="button" className="btn btn-info px-5 py-2 fw-bold text-white my-3"><Link to={`/checkout/${topic.category_id}`}>Get Premium Access</Link></button>
+                                                    {/* <a href="/premium" className="btn btn-primary mb-3">Get Premium Access</a> */}
                                                 </div>
 
                                             </div>
