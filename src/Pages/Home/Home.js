@@ -31,14 +31,6 @@ const Home = () => {
                 <FAQ></FAQ>
             </div>
 
-            {/* <div className='topic-container m-5'>
-                {
-                    topics.map(topic => <Topic
-                        key={topic.id}
-                        topic={topic}></Topic>)
-                }
-            </div> */}
-
         </div>
     );
 };
