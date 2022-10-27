@@ -57,7 +57,7 @@ const CourseDetail = () => {
                     </Row>
                 </Container>
             </div >
-        </div>
+        </div >
 
     );
 };
