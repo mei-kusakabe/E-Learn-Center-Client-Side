@@ -110,7 +110,7 @@ const Login = () => {
             <div className="rounded d-flex justify-content-center">
                 <div className="form col-md-4 col-sm-12 shadow-lg p-5 rounded  mt-3">
                     <div className="text-center">
-                        <h3 className="text-white fw-bold fs-2">Please Log in!!</h3>
+                        <h3 className="text-white fw-bold fs-2 y">Please Log in!!</h3>
                     </div>
                     <Form onSubmit={handleSubmit} className="mt-3 py-3 border shadow-lg rounded-3 bg-light box2">
                         <div className="p-4">
@@ -127,14 +127,14 @@ const Login = () => {
                                 {error}
                             </Form.Text>
                             <hr />
-                            <h5>OR</h5>
+                            <h5 className='y'>OR</h5>
                             <div>
                                 <ButtonGroup vertical>
                                     <Button onClick={handleGoogleSignIn} className='mb-2 fw-bold' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
                                     <Button onClick={handleGitSignIn} className='mb-2 fw-bold' variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
                                 </ButtonGroup>
                             </div>
-                            <p className='mt-3'>Need an Account? <Link to="/register"> <span className='fw-bold'>Register</span></Link></p>
+                            <p className='mt-3 y'>Need an Account? <Link to="/register"> <span className='fw-bold'>Register</span></Link></p>
                         </div>
                     </Form>
                 </div>

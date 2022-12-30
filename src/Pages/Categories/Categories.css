@@ -1,3 +1,122 @@
 .categories {
-    background-color: #98A8F8;
+    /* background-color: #98A8F8; */
+    background: radial-gradient(circle at 10% 20%, rgb(186, 190, 245) 0%, rgb(192, 192, 245) 33.1%, rgb(218, 203, 246) 90%);
+}
+
+.topic-all {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px;
+
+}
+
+
+/* for-small-devices*/
+@media screen and (max-width:768px) {
+    .topic-all {
+        display: grid;
+        grid-template-columns: repeat(1, 5fr) !important;
+        gap: 15px;
+        margin: auto;
+    }
+
+    .topic img {
+        height: 200px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .animate {
+
+        font-size: 1.5em;
+        font-weight: 200;
+        line-height: 0.5;
+    }
+
+    .topic {
+        width: 100%;
+
+    }
+}
+
+/* for-tablet-devices */
+
+@media (min-width: 769px) and (max-width : 1200px) {
+    .topic-all {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr) !important;
+        gap: 25px;
+    }
+
+    .topic img {
+        height: 350px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.animate {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 2.5em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.animate:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow:
+            0 0.125em 0 #0c2ffb,
+            0 0.25em 0 #2cfcfd,
+            0 -0.125em 0 #fb203b,
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+        transform: translateY(0.5em);
+        text-shadow:
+            0 -0.0625em 0 #0c2ffb,
+            0 -0.125em 0 #2cfcfd,
+            0 0.0625em 0 #fb203b,
+            0 0.125em 0 #fefc4b;
+    }
+
+    60% {
+        transform: translateY(-0.25em);
+        text-shadow:
+            0 0.03125em 0 #0c2ffb,
+            0 0.0625em 0 #2cfcfd,
+            0 -0.03125em 0 #fb203b,
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }

@@ -6,5 +6,9 @@ a {
 }
 
 .nav-bg {
-    background-color: #7579E7;
+    /* background-color: #7579E7; */
+    /* background-color: #613864; */
+
+    background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(122, 101, 149) 101.8%);
+
 }

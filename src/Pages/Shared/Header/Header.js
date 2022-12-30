@@ -53,10 +53,7 @@ const Header = () => {
                             <Nav.Link href="/home" className='pe-2 text-white fw-bold'>Home</Nav.Link>
                             <Nav.Link href="/courseCategories" className='pe-2 text-white fw-bold'>Courses</Nav.Link>
                             <Nav.Link href="/faq" className='pe-2 text-white fw-bold'>FAQ</Nav.Link>
-                            <Nav.Link href="/blog" className='pe-2 text-white fw-bold'>Blog</Nav.Link>
-                            {/* <Nav.Link eventKey={2} href="/about" className='pe-2 text-white fw-bold'>
-                                About Us
-                            </Nav.Link> */}
+                            <Nav.Link href="/blog" id='blog' className='pe-2 text-white fw-bold'>Blog</Nav.Link>
                             <Nav>
                                 <>
                                     {
@@ -64,15 +61,12 @@ const Header = () => {
                                             <>
                                                 <span className='fw-bold my-2 mx-2'>{user?.displayName}</span>
 
-                                                {/* <FaArrowRight onClick={handleLogOut}></FaArrowRight> */}
                                                 <FaSignOutAlt className='fw-bold my-2 fs-4 mx-2' onClick={handleLogOut}></FaSignOutAlt>
 
-                                                {/* <Button variant="light" onClick={handleLogOut}>Log out</Button> */}
                                             </>
                                             :
                                             <>
-                                                <Link to='/login' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Login</Link>
-                                                {/* <Link to='/register' style={{ textDecoration: 'none' }} className='text-white fw-bold'>Register</Link> */}
+                                                <Link to='/login' style={{ textDecoration: 'none' }} className=' pt-2 text-white fw-bold'>Login</Link>
                                             </>
                                     }
 
@@ -89,13 +83,8 @@ const Header = () => {
                                     }
                                 </Link>
                             </Nav>
-
-                            {/* <Nav.Link href="/login" className='pe-2'>Login</Nav.Link>
-                            <Nav.Link href="/register" className='pe-2'>Sign Up</Nav.Link> */}
                         </Nav>
-                        {/* <div className='d-none'>
-                            <LeftSideNav></LeftSideNav>
-                        </div> */}
+
                     </Navbar.Collapse>
                     <div className={`header ${theme}`}>
                         {

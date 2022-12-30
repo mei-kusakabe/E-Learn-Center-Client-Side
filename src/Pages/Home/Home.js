@@ -10,8 +10,8 @@ const Home = () => {
                 <div className="mask">
                     <div className="d-flex justify-content-center align-items-center">
                         <div>
-                            <h1 className="mb-5 text-black fw-bold">E-learning Centre</h1>
-                            <h4 className="mb-3 fst-italic text-center text-white">“Anyone who stops learning is old, whether at twenty or eighty.”<br></br> Anyone who keeps learning stays young.” ~ Henry Ford</h4>
+                            <h1 className="mb-5 text-black fw-bold heading text-white">E-learning Centre</h1>
+                            <h4 className="mb-3 fst-italic text-center text-white quote">“Anyone who stops learning is old, whether at twenty or eighty.”<br></br> Anyone who keeps learning stays young.” ~ Henry Ford</h4>
                             <a className="mb-3 btn btn-outline-light btn-lg fw-bold" href="/courseCategories" role="button"
                             >Go to Courses</a
                             >

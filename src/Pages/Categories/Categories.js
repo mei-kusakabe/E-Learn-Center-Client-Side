@@ -9,16 +9,16 @@ const Categories = () => {
     const categories = useLoaderData();
     console.log(categories);
     return (
-        <div className='categories'>
+        <div >
             <Container>
                 <Row>
-                    <Col lg="2" className='d-none d-lg-block my-5'>
+                    <Col lg="3" className='d-none d-lg-block my-5'>
                         <LeftSideNav></LeftSideNav>
                     </Col>
-                    <Col lg="10">
-                        <div >
-                            <h2 className='fw-bold mt-5'>All Courses</h2>
-                            <div className='topic-all m-5 border-0'>
+                    <Col lg="9">
+                        <div className='categories m-5 px-5 rounded'>
+                            <h2 className='fw-bold pt-5 heading animate'>All Courses</h2>
+                            <div className='topic-all py-5 border-0'>
 
                                 {
                                     categories.map(topic => <Category

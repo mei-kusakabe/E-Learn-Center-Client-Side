@@ -11,7 +11,7 @@ const Checkout = () => {
 
             <div class="row mx-5 d-flex justify-content-center">
 
-                <h2 class="my-5 h2 text-center text-white fw-bold">Checkout form</h2>
+                <h2 class="my-5 h2 text-center text-white fw-bold y">Checkout Form</h2>
 
 
                 <div class="col-md-8 mb-4 ">
@@ -190,9 +190,9 @@ const Checkout = () => {
                                 categories.map(topic => <div className='mt-5  px-5 py-3 card'
                                     key={topic.id}
                                     topic={topic}>
-                                    <h2 className='fw-bold'>{topic.name}</h2>
+                                    <h2 className='fw-bold y'>{topic.name}</h2>
                                     <img src={topic.logo} alt="Course-Img" className="card-img-top" />
-                                    <h5 className="card-title mt-2">{topic.name}</h5>
+                                    <h5 className="card-title mt-2 y">{topic.name}</h5>
                                     <div className=''>
                                         {/* <span className='fw-bold'>Course Description: </span>{topic.description} */}
                                         <p className="card-text">{topic.description}</p>

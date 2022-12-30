@@ -103,7 +103,7 @@ const Register = () => {
                 <div className="rounded d-flex justify-content-center">
                     <div className="form col-md-4 col-sm-12 shadow-lg p-5 rounded  mt-3">
                         <div className="text-center">
-                            <h3 className="text-white fw-bold fs-2">Welcome to Register Page!!</h3>
+                            <h3 className="text-white fw-bold fs-2 y">Welcome to Register Page!!</h3>
                         </div>
                         <Form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center align-items-center border shadow-lg rounded-3 bg-light ">
                             <div className="p-4">
@@ -124,12 +124,12 @@ const Register = () => {
                                     <input type="password" className="form-control" name="password" placeholder="Password" required />
                                 </div>
 
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                     <Form.Check
                                         type="checkbox"
                                         onClick={handleAccepted}
                                         label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
-                                </Form.Group>
+                                </Form.Group> */}
 
                                 <Button variant="primary" className="btn-xl fw-bold" type="submit" disabled={!accepted}> Register</Button>
                                 <Form.Text className="text-danger">
@@ -137,7 +137,7 @@ const Register = () => {
                                 </Form.Text>
                                 <hr />
 
-                                <p className='mt-3'>Already an User? <Link to="/login"> <span className='fw-bold'>Login</span></Link></p>
+                                <p className='mt-3 y'>Already an User? <Link to="/login"> <span className='fw-bold'>Login</span></Link></p>
                             </div>
                         </Form>
                     </div>

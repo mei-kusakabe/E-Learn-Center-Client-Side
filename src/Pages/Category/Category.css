@@ -1,13 +1,13 @@
 .topic {
-    border: 1px solid lightblue;
+    border: 1px solid #F1F6F5;
     border-radius: 5px;
     padding-bottom: 20px;
     overflow-x: hidden;
-
+    background: radial-gradient(circle at 0.3% 1.3%, rgb(235, 217, 221) 0%, rgb(216, 174, 211) 45.1%, rgb(145, 130, 196) 100.2%);
 }
 
 .topic img {
-    height: 250px;
+    height: 200px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -19,75 +19,57 @@
 }
 
 
-/* .topic-container {
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    gap: 15px;
-}*/
 
-.topic-all {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 15px;
 
-}
+/* for-phones-devices*/
 
-/* for-small-devices*/
-@media screen and (max-width:480px) {
-    /* .topic-container {
-        display: grid;
-        grid-template-columns: repeat(1, 2fr);
-        gap: 45px;
-
-    } */
-
-    .topic img {
-        height: 150px;
-        width: 250px;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-}
-
-/* for-tablet-devices */
-
-@media (min-width: 481px) and (max-width : 1200px) {
-    /* .topic-container {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        gap: 25px;
-
-    } */
-
-    .topic img {
-        height: 150px;
-        width: 350px;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-}
-
-/* for-small-devices*/
-@media screen and (max-width:768px) {
-    .topic-all {
-        display: grid;
-        grid-template-columns: repeat(1, 2fr) !important;
-        gap: 15px;
-    }
+@media (min-width: 200px) and (max-width : 600px) {
 
     .topic img {
         height: 200px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.7);
     }
+
+    .topic-all,
+    .topic {
+        width: 100%;
+    }
+
+    .category-button {
+        padding: 0%;
+    }
+
+
 }
+
 
 /* for-tablet-devices */
 
-@media (min-width: 769px) and (max-width : 1200px) {
-    .topic-all {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr) !important;
-        gap: 25px;
+@media (min-width: 601px) and (max-width : 768px) {
+
+    .topic img {
+        height: 350px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
     }
+}
+
+
+/* for-laptop-devices */
+
+@media (min-width: 769px) and (max-width : 992px) {
+
+    .topic img {
+        height: 350px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* for-large-devices */
+
+@media (min-width: 993px) and (max-width : 1200px) {
 
     .topic img {
         height: 350px;

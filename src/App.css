@@ -41,3 +41,23 @@
 .white-content {
   background: #e4e4e4;
 }
+
+.normal-font {
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.heading {
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: hidden;
+}
+
+.category-button {
+  background: radial-gradient(732px at 96.2% 89.9%, rgb(70, 66, 159) 0%, rgb(187, 43, 107) 92%);
+}
+
+.y {
+  overflow-y: hidden;
+}

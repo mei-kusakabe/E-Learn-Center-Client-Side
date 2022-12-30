@@ -4,7 +4,8 @@
     margin: 0 auto; */
 
     /* background-color: rgb(149, 205, 205); */
-    background-color: #98A8F8;
+    /* background-color: #98A8F8; */
+    background: radial-gradient(circle at 10% 20%, rgb(186, 190, 245) 0%, rgb(192, 192, 245) 33.1%, rgb(218, 203, 246) 90%);
     /* margin-left: 200px;
     margin-right: 200px; */
 
@@ -25,4 +26,8 @@
 
 .course-btn {
     background-color: #5837D0;
+}
+
+.custom-button {
+    background-color: #453C67;
 }
